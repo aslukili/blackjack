@@ -1,4 +1,6 @@
 public class Card {
+
+
   int value;
   int type;
 
