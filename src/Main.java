@@ -14,36 +14,14 @@ public class Main {
 
     int choice = scanner.nextInt();
 
-
-
     switch (choice){
       case 1:
-        game.createCards();
-        game.createBlackJack();
-        // give two cards to player
-        game.playerDrawN();
-        // give the dealer 1 card:
-        game.dealerDrawN();
-        // give another card to the player
-        game.playerDrawN();
-        //give another card to the dealer
-        game.dealerDrawN();
-        // show player's hand
-        game.gameState();
-
-
-        game.playerPlays();
-
-        game.dealerPlays();
-        // whois the winner
-        game.gameState();
-        if (game.totalCards(game.dealer.dealerCards) > game.totalCards(game.player.playerCards) && game.totalCards(game.dealer.dealerCards) < 21){
-          System.out.println("dealer won this game!");
-        } else {
-          System.out.println("you won");
-        }
-
-        break;
+      game.play();
+        System.out.println("\n\n \t what to do now? \n 1- play again \n 2- exit");
+      choice = scanner.nextInt();
+      if (choice == 1) game.play();
+      if (choice == 2) return;
+//      else System.out.println("something went wrong!");
       case 2:
         break;
       default:

@@ -1,20 +1,28 @@
 public class Card {
 
+  private Suit suit;
+  private Value value;
 
-  int value;
-  int type;
 
-  public Card(int value, int type) {
+
+  public Card(Suit suit, Value value) {
     this.value = value;
-    this.type = type;
+    this.suit = suit;
   }
 
+  public Suit getSuit() {
+    return suit;
+  }
+
+  public Value getValue() {
+    return value;
+  }
 
   @Override
   public String toString() {
     return "Card{" +
       "value=" + value +
-      ", type=" + type +
+      ", type=" + suit +
       '}';
   }
 
